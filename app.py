@@ -6,17 +6,56 @@ from chatterbot.trainers import ListTrainer
 app = Flask(__name__)
 bot = ChatBot("Candice")
 # chatbot = ChatBot('Training Example')
-conversation = [
-    "Helo",
-    "Hi thre!",
-    "How ar you doing?",
-    "I'm ding great.",
+trainer = ListTrainer(bot)
+
+trainer.train([
+    "Hello",
+    "Hi there!",
+    "How are you doing?",
+    "I'm doing great.",
     "That is god to hear",
     "Thank you.",
     "You're welcome."
-]
-trainer = ListTrainer(bot)
-trainer.train(conversation)
+])
+trainer.train([
+    "cya", "See you later", "Goodbye", "I am Leaving","bye","Have a Good day",
+    "Sad to see you go :(", "Talk to you later", "Goodbye!"
+])
+trainer.train([
+    "tell me about yourself","I am an AI bot created by the Alphabot team","who created you?","Alphabot created me for registration of crime online","team that builds you"
+])
+trainer.train([
+    "i want to register a complaint","Yah sure","register a complaint","Response to the following questions to file a complaint","register fir","Sure, follow along with me","fir","sure, follow me"
+])
+# trainer.train([
+#     "Hello",
+#     "Hi there!",
+#     "How are you doing?",
+#     "I'm doing great.",
+#     "That is god to hear",
+#     "Thank you.",
+#     "You're welcome."
+# ])
+# trainer.train([
+#     "Hello",
+#     "Hi there!",
+#     "How are you doing?",
+#     "I'm doing great.",
+#     "That is god to hear",
+#     "Thank you.",
+#     "You're welcome."
+# ])
+# trainer.train([
+#     "Hello",
+#     "Hi there!",
+#     "How are you doing?",
+#     "I'm doing great.",
+#     "That is god to hear",
+#     "Thank you.",
+#     "You're welcome."
+# ])
+
+# trainer.train(conversation)
 
 # trainer.train([
 #     "Hi there!",
