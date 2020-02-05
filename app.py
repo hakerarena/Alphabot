@@ -5,27 +5,34 @@ from chatterbot.trainers import ListTrainer
 
 app = Flask(__name__)
 bot = ChatBot("Candice")
-chatbot = ChatBot('Training Example')
-from chatterbot.trainers import ListTrainer
+# chatbot = ChatBot('Training Example')
+conversation = [
+    "Helo",
+    "Hi thre!",
+    "How ar you doing?",
+    "I'm ding great.",
+    "That is god to hear",
+    "Thank you.",
+    "You're welcome."
+]
+trainer = ListTrainer(bot)
+trainer.train(conversation)
 
-trainer = ListTrainer(chatbot)
+# trainer.train([
+#     "Hi there!",
+#     "Hello",
+# ])
 
-trainer.train([
-    "Hi there!",
-    "Hello",
-])
+# trainer.train([
+#     "Greetings!",
+#     "Hello",
+# ])
 
-trainer.train([
-    "Greetings!",
-    "Hello",
-])
-from chatterbot.trainers import ChatterBotCorpusTrainer
+# trainer = ChatterBotCorpusTrainer(bot)
 
-trainer = ChatterBotCorpusTrainer(chatbot)
-
-trainer.train(
-    "chatterbot.corpus.english"
-)
+# trainer.train(
+#     "chatterbot.corpus.english"
+# )
 # trainer.train(
 #     "./data/greetings_corpus/custom.corpus.json",
 #     "./data/my_corpus/"
