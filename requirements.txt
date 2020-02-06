@@ -34,3 +34,4 @@ urllib3==1.25.8
 wasabi==0.6.0
 Werkzeug==0.14.1
 wincertstore==0.2
+tensorflow==1.15
